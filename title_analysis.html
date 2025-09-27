@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'title_analysis';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="prev" title="Historical Book Title Analysis" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,7 +174,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Historical Book Title Analysis
                 </a>
             </li>
         </ul>
@@ -454,18 +454,6 @@ document.write(`
 <li><p>Box plots for distribution analysis across time periods</p></li>
 <li><p>Comparative analysis across different languages</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <section id="required-libraries">
 <h3>Required Libraries<a class="headerlink" href="#required-libraries" title="Link to this heading">#</a></h3>
 <p>This analysis requires several Python libraries for data manipulation and visualization:</p>
@@ -480,6 +468,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -638,19 +627,12 @@ Top 5 languages represent 81.8% of all books
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">22</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># Define colors for different languages</span>
-<span class="ne">---&gt; </span><span class="mi">22</span> <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())))</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">language</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">subset</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="p">[</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">language</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1400x800 with 0 Axes&gt;
+<img alt="_images/47b5312951e06a20da40bc02eeba9e43088c20405698d5e9f57481ce98e6e5f6.png" src="_images/47b5312951e06a20da40bc02eeba9e43088c20405698d5e9f57481ce98e6e5f6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title Length Analysis Summary:
+Period analyzed: 1600-1900
+Languages included: 5
+Average title length (1600): 139.0 characters
+Average title length (1900): 70.7 characters
 </pre></div>
 </div>
 </div>
@@ -700,7 +682,16 @@ Top 5 languages represent 81.8% of all books
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d3e023a0098fcd2e4cf4c4a9c00629d9b12c16c97b6168d86605dfb7cd9b1ca1.png" src="_images/d3e023a0098fcd2e4cf4c4a9c00629d9b12c16c97b6168d86605dfb7cd9b1ca1.png" />
+<img alt="_images/0da918568034a9922aa5ea29e2da6e21adf816c526f940a43737b370dbbef0af.png" src="_images/0da918568034a9922aa5ea29e2da6e21adf816c526f940a43737b370dbbef0af.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Language-Specific Title Length Statistics:
+==================================================
+ dan: Mean =  156.8, Std =  55.7, Count =  300
+ eng: Mean =  139.5, Std =  25.8, Count =  300
+ fre: Mean =  117.6, Std =  15.9, Count =  300
+ ger: Mean =  159.6, Std =  49.1, Count =  300
+ lat: Mean =  126.9, Std =  14.2, Count =  300
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -747,10 +738,23 @@ Top 5 languages represent 81.8% of all books
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1200x800 with 0 Axes&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1400x800 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/24ca9a683e736638b82f08cf737b28be327dee11673f94196b99293d1fdd6f26.png" src="_images/24ca9a683e736638b82f08cf737b28be327dee11673f94196b99293d1fdd6f26.png" />
+<img alt="_images/06fc48285480fb8c868ebc007de1c65acca463ff322d61c028c0a7d84eda27ee.png" src="_images/06fc48285480fb8c868ebc007de1c65acca463ff322d61c028c0a7d84eda27ee.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title Length Statistics by 50-Year Periods:
+============================================================
+            count   mean  median   std    min    max
+year_group                                          
+1600          246  168.6   149.0  49.0   80.0  295.4
+1650          250  170.8   161.3  39.5  105.9  250.5
+1700          250  155.5   151.0  25.5   91.4  210.3
+1750          250  130.8   125.6  16.7  106.2  190.6
+1800          250  118.8   117.9  12.4   90.9  172.1
+1850          250   97.5    95.8  12.3   68.9  131.0
+1900            4   70.7    71.2   5.3   64.5   76.0
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -831,7 +835,65 @@ Top 5 languages represent 81.8% of all books
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/258447ecaf0af96985900b1dd6977ae539f27b0346476f52bffb38fbd7bd9fec.png" src="_images/258447ecaf0af96985900b1dd6977ae539f27b0346476f52bffb38fbd7bd9fec.png" />
+<img alt="_images/cd941563eaed23f374f88e7f764add6f1acb158fa9ca54ea9d782ae5a530a310.png" src="_images/cd941563eaed23f374f88e7f764add6f1acb158fa9ca54ea9d782ae5a530a310.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Language-Specific Summary by Period:
+======================================================================
+
+DAN:
+            count   mean   std
+year_group                    
+1600           49  226.9  28.2
+1650           50  209.8  21.0
+1700           50  175.3  19.5
+1750           50  144.0  21.8
+1800           50  105.6   7.6
+1850           50   82.4   7.1
+1900            1   74.1   NaN
+
+ENG:
+            count   mean   std
+year_group                    
+1600           49  141.6  31.0
+1650           50  164.8  19.9
+1700           50  150.9  15.4
+1750           50  140.4  11.8
+1800           50  135.6   9.9
+1850           50  104.9  10.8
+1900            1   64.5   NaN
+
+FRE:
+            count   mean   std
+year_group                    
+1600           49  120.4  12.4
+1650           50  122.6  11.1
+1700           50  132.5  12.3
+1750           50  120.0   6.0
+1800           50  118.6   9.4
+1850           50   92.5   7.0
+1900            1   76.0   NaN
+
+GER:
+            count   mean   std
+year_group                    
+1600           49  214.7  25.8
+1650           50  214.1  16.3
+1700           50  185.3  11.5
+1750           50  129.5  14.5
+1800           50  118.2   5.0
+1850           50   98.6   5.7
+1900            1   68.3   NaN
+
+LAT:
+            count   mean  std
+year_group                   
+1600           50  139.9  7.5
+1650           50  142.7  6.0
+1700           50  133.3  6.5
+1750           50  120.1  6.6
+1800           50  116.1  6.5
+1850           50  109.4  7.5
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -926,7 +988,7 @@ Top 5 languages represent 81.8% of all books
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Historical Book Title Analysis</p>
       </div>
     </a>
 </div>
