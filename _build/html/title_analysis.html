@@ -1,0 +1,1038 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Historical Book Title Analysis &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'title_analysis';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Historical Book Title Analysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftitle_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/title_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Historical Book Title Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#research-questions">Research Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description">Dataset Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-libraries">Required Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-loading">Data Loading</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#language-distribution-analysis">2. Language Distribution Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Overview</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-analysis-of-title-lengths-1600-1900">3. Temporal Analysis of Title Lengths (1600-1900)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Methodology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-research-questions">Key Research Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-analysis-with-smoothing">3.1 Time Series Analysis with Smoothing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filled-area-visualization">3.2 Filled Area Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-analysis-across-time-periods">4. Distribution Analysis Across Time Periods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplot-analysis-by-50-year-intervals">4.1 Boxplot Analysis by 50-Year Intervals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#language-specific-distribution-analysis">4.2 Language-Specific Distribution Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions-and-insights">5. Conclusions and Insights</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-findings">Key Findings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#language-distribution">Language Distribution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-evolution-of-title-lengths">Temporal Evolution of Title Lengths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-analysis">Distribution Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodological-considerations">Methodological Considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-research-directions">Future Research Directions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-notes">Technical Notes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="historical-book-title-analysis">
+<h1>Historical Book Title Analysis<a class="headerlink" href="#historical-book-title-analysis" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This notebook presents a comprehensive analysis of historical book titles from the 17th to 19th centuries, examining patterns in language distribution and title length evolution. The analysis is based on a dataset containing book metadata from Danish libraries and archives.</p>
+</section>
+<section id="research-questions">
+<h2>Research Questions<a class="headerlink" href="#research-questions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Language Distribution</strong>: What languages were most commonly used for book titles during this period?</p></li>
+<li><p><strong>Temporal Evolution</strong>: How did average title lengths change over time from 1600-1900?</p></li>
+<li><p><strong>Language-Specific Patterns</strong>: Are there distinct patterns in title length evolution across different languages?</p></li>
+<li><p><strong>Historical Trends</strong>: What can title length patterns tell us about publishing and literary trends?</p></li>
+</ol>
+</section>
+<section id="dataset-description">
+<h2>Dataset Description<a class="headerlink" href="#dataset-description" title="Link to this heading">#</a></h2>
+<p>The analysis uses two main datasets:</p>
+<ul class="simple">
+<li><p><strong>Language Counts</strong>: Contains the frequency of books by language code</p></li>
+<li><p><strong>Yearly Language Title Length</strong>: Contains average title lengths by year and language</p></li>
+</ul>
+</section>
+<section id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
+<p>This analysis employs statistical visualization techniques including:</p>
+<ul class="simple">
+<li><p>Bar charts for language distribution</p></li>
+<li><p>Time series plots with smoothing for trend analysis</p></li>
+<li><p>Box plots for distribution analysis across time periods</p></li>
+<li><p>Comparative analysis across different languages</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="required-libraries">
+<h3>Required Libraries<a class="headerlink" href="#required-libraries" title="Link to this heading">#</a></h3>
+<p>This analysis requires several Python libraries for data manipulation and visualization:</p>
+<ul class="simple">
+<li><p><strong>pandas</strong>: For data manipulation and analysis</p></li>
+<li><p><strong>matplotlib</strong>: For creating plots and visualizations</p></li>
+<li><p><strong>numpy</strong>: For numerical operations</p></li>
+<li><p><strong>warnings</strong>: For managing warning messages</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-loading">
+<h3>Data Loading<a class="headerlink" href="#data-loading" title="Link to this heading">#</a></h3>
+<p>We load two main datasets for our analysis:</p>
+<ol class="arabic simple">
+<li><p><strong>Language Counts Dataset</strong>: Contains the frequency of books by language code</p></li>
+<li><p><strong>Yearly Language Title Length Dataset</strong>: Contains average title lengths by year and language</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">language_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;language_counts.csv&#39;</span><span class="p">)</span>
+<span class="n">yearly_language_title_length</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;yearly_language_title_length.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="language-distribution-analysis">
+<h2>2. Language Distribution Analysis<a class="headerlink" href="#language-distribution-analysis" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Overview<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>This section examines the distribution of books by language, providing insights into the linguistic landscape of historical publishing. We focus on the top 15 most common languages to highlight the dominant publishing languages of the period.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create visualization of language distribution</span>
+<span class="c1"># Select top 15 languages for better readability</span>
+<span class="n">language_counts_vis</span> <span class="o">=</span> <span class="n">language_counts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Set up the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Extract data for plotting</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">language_counts_vis</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">language_counts_vis</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create bar chart</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Customize the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Language Code&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Books&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution of Books by Language (Top 15)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add value labels on top of bars</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="mf">0.01</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Display summary statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Language Distribution Summary:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total languages in dataset: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">language_counts</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total books: </span><span class="si">{</span><span class="n">language_counts</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Top 5 languages represent </span><span class="si">{</span><span class="n">language_counts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">language_counts</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% of all books&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6c7dd88027e5667a39f0e42f01fcba7d84741d55e76d3d6aa6e71e5c29be831f.png" src="_images/6c7dd88027e5667a39f0e42f01fcba7d84741d55e76d3d6aa6e71e5c29be831f.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Language Distribution Summary:
+Total languages in dataset: 181
+Total books: 849,169
+Top 5 languages represent 81.8% of all books
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="temporal-analysis-of-title-lengths-1600-1900">
+<h2>3. Temporal Analysis of Title Lengths (1600-1900)<a class="headerlink" href="#temporal-analysis-of-title-lengths-1600-1900" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Methodology<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>This section analyzes how book title lengths evolved over time from 1600 to 1900. The analysis includes:</p>
+<ul class="simple">
+<li><p><strong>Data Processing</strong>: Conversion of year and title length columns to numeric format</p></li>
+<li><p><strong>Temporal Grouping</strong>: Analysis of title length trends by year and language</p></li>
+<li><p><strong>Visualization</strong>: Multiple visualization approaches to reveal patterns</p></li>
+</ul>
+</section>
+<section id="key-research-questions">
+<h3>Key Research Questions<a class="headerlink" href="#key-research-questions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>How did average title lengths change over the 300-year period?</p></li>
+<li><p>Are there distinct patterns for different languages?</p></li>
+<li><p>What historical events might correlate with changes in title length?</p></li>
+</ul>
+</section>
+<section id="time-series-analysis-with-smoothing">
+<h3>3.1 Time Series Analysis with Smoothing<a class="headerlink" href="#time-series-analysis-with-smoothing" title="Link to this heading">#</a></h3>
+<p>This visualization shows the evolution of title lengths over time with smoothing applied to reveal underlying trends. The rolling average helps reduce noise and highlight long-term patterns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data preprocessing: Ensure numeric types and clean data</span>
+<span class="n">yearly_language_title_length</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="c1"># Remove rows with invalid data</span>
+<span class="n">yearly_language_title_length</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">,</span> <span class="s1">&#39;title_length&#39;</span><span class="p">])</span>
+
+<span class="c1"># Filter to focus on 1600-1900 period</span>
+<span class="n">yearly_language_title_length</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1600</span><span class="p">)</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">1900</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate overall mean title length for each year</span>
+<span class="n">mean_title_length</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year_st&#39;</span><span class="p">)[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Create the visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Define colors for different languages</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">language</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="p">[</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">language</span><span class="p">]</span>
+    
+    <span class="c1"># Apply rolling average to smooth the curve (20-year window, minimum 10 data points)</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;year_st&#39;</span><span class="p">)</span>
+    <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;smoothed_title_length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="c1"># Plot smoothed line</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">],</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;smoothed_title_length&#39;</span><span class="p">],</span> 
+             <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">language</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Plot the overall mean as a reference</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">],</span> <span class="n">mean_title_length</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">],</span> 
+         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Overall Mean&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Customize the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Average Title Length (characters)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolution of Book Title Lengths by Language (1600-1900)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Display summary statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Title Length Analysis Summary:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Period analyzed: 1600-1900&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Languages included: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average title length (1600): </span><span class="si">{</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1600</span><span class="p">][</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> characters&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average title length (1900): </span><span class="si">{</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1900</span><span class="p">][</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> characters&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">22</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="c1"># Define colors for different languages</span>
+<span class="ne">---&gt; </span><span class="mi">22</span> <span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())))</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">language</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">subset</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="p">[</span><span class="n">yearly_language_title_length</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">language</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1400x800 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filled-area-visualization">
+<h3>3.2 Filled Area Visualization<a class="headerlink" href="#filled-area-visualization" title="Link to this heading">#</a></h3>
+<p>This alternative visualization uses filled areas to show the distribution of title lengths across languages over time, making it easier to see the relative contribution of each language to the overall pattern.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create filled area plot for better visual comparison</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Group by language and create filled areas</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;language&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define colors for consistency</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">groups</span><span class="p">)))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">groups</span><span class="p">):</span>
+    <span class="c1"># Sort by year for proper line plotting</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;year_st&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">],</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">],</span> 
+                     <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="c1"># Plot the overall mean as a reference line</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_title_length</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">],</span> <span class="n">mean_title_length</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">],</span> 
+         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Overall Mean&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Customize the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Average Title Length (characters)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Title Length Distribution by Language (1600-1900)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Calculate and display language-specific statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Language-Specific Title Length Statistics:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">:</span>
+    <span class="n">avg_length</span> <span class="o">=</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">std_length</span> <span class="o">=</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&gt;4</span><span class="si">}</span><span class="s2">: Mean = </span><span class="si">{</span><span class="n">avg_length</span><span class="si">:</span><span class="s2">6.1f</span><span class="si">}</span><span class="s2">, Std = </span><span class="si">{</span><span class="n">std_length</span><span class="si">:</span><span class="s2">5.1f</span><span class="si">}</span><span class="s2">, Count = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="si">:</span><span class="s2">4d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d3e023a0098fcd2e4cf4c4a9c00629d9b12c16c97b6168d86605dfb7cd9b1ca1.png" src="_images/d3e023a0098fcd2e4cf4c4a9c00629d9b12c16c97b6168d86605dfb7cd9b1ca1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="distribution-analysis-across-time-periods">
+<h2>4. Distribution Analysis Across Time Periods<a class="headerlink" href="#distribution-analysis-across-time-periods" title="Link to this heading">#</a></h2>
+<section id="boxplot-analysis-by-50-year-intervals">
+<h3>4.1 Boxplot Analysis by 50-Year Intervals<a class="headerlink" href="#boxplot-analysis-by-50-year-intervals" title="Link to this heading">#</a></h3>
+<p>Boxplots provide insights into the distribution of title lengths across different time periods, showing median values, quartiles, and outliers. This helps identify periods of significant change in title length patterns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create 50-year time intervals for distribution analysis</span>
+<span class="n">yearly_language_title_length1</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;year_group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span> <span class="o">//</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mi">50</span>
+
+<span class="c1"># Create comprehensive boxplot analysis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Create boxplot for all languages combined</span>
+<span class="n">yearly_language_title_length1</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;title_length&#39;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;year_group&#39;</span><span class="p">,</span> 
+                                     <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">patch_artist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Customize the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution of Title Lengths by 50-Year Intervals (1600-1900)&#39;</span><span class="p">,</span> 
+          <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># Remove default title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year Group&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Title Length (characters)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add statistical annotations</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Calculate and display period statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Title Length Statistics by 50-Year Periods:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">period_stats</span> <span class="o">=</span> <span class="n">yearly_language_title_length1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year_group&#39;</span><span class="p">)[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span>
+    <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span>
+<span class="p">])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">period_stats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1200x800 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/24ca9a683e736638b82f08cf737b28be327dee11673f94196b99293d1fdd6f26.png" src="_images/24ca9a683e736638b82f08cf737b28be327dee11673f94196b99293d1fdd6f26.png" />
+</div>
+</div>
+</section>
+<section id="language-specific-distribution-analysis">
+<h3>4.2 Language-Specific Distribution Analysis<a class="headerlink" href="#language-specific-distribution-analysis" title="Link to this heading">#</a></h3>
+<p>This section examines how title length distributions vary across different languages over time, providing insights into language-specific publishing patterns and cultural differences in titling conventions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create language-specific boxplot analysis</span>
+<span class="n">yearly_language_title_length1</span> <span class="o">=</span> <span class="n">yearly_language_title_length</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;year_group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;year_st&#39;</span><span class="p">]</span> <span class="o">//</span> <span class="mi">50</span><span class="p">)</span> <span class="o">*</span> <span class="mi">50</span>
+
+<span class="c1"># Group by language and year_group</span>
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">yearly_language_title_length1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;language&#39;</span><span class="p">,</span> <span class="s1">&#39;year_group&#39;</span><span class="p">])</span>
+
+<span class="c1"># Get unique languages and create subplots</span>
+<span class="n">languages</span> <span class="o">=</span> <span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">n_languages</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span>
+
+<span class="c1"># Create subplots with appropriate sizing</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_languages</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">n_languages</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Handle case where there&#39;s only one language</span>
+<span class="k">if</span> <span class="n">n_languages</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">axes</span><span class="p">]</span>
+
+<span class="c1"># Create boxplots for each language</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">language</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">languages</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="c1"># Get data for this language</span>
+    <span class="n">language_data</span> <span class="o">=</span> <span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">language</span><span class="p">]</span>
+    
+    <span class="c1"># Prepare data for boxplot</span>
+    <span class="n">data_to_plot</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">year_group</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">language_data</span><span class="p">[</span><span class="s1">&#39;year_group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+        <span class="n">group_data</span> <span class="o">=</span> <span class="n">language_data</span><span class="p">[</span><span class="n">language_data</span><span class="p">[</span><span class="s1">&#39;year_group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year_group</span><span class="p">][</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">group_data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Only include groups with data</span>
+            <span class="n">data_to_plot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">group_data</span><span class="p">)</span>
+            <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">year_group</span><span class="p">)</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">year_group</span><span class="o">+</span><span class="mi">49</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Create boxplot</span>
+    <span class="k">if</span> <span class="n">data_to_plot</span><span class="p">:</span>  <span class="c1"># Only plot if there&#39;s data</span>
+        <span class="n">bp</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data_to_plot</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">patch_artist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="c1"># Color the boxes</span>
+        <span class="k">for</span> <span class="n">patch</span> <span class="ow">in</span> <span class="n">bp</span><span class="p">[</span><span class="s1">&#39;boxes&#39;</span><span class="p">]:</span>
+            <span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">n_languages</span><span class="p">))</span>
+            <span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
+    
+    <span class="c1"># Customize subplot</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Title Length Distribution for </span><span class="si">{</span><span class="n">language</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> 
+                 <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Title Length (characters)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    
+    <span class="c1"># Rotate x-axis labels for better readability</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="c1"># Set common x-label</span>
+<span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;50-Year Periods&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Display language-specific summary statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Language-Specific Summary by Period:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
+    <span class="n">lang_data</span> <span class="o">=</span> <span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="n">yearly_language_title_length1</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">language</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">lang_data</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">language</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="n">period_summary</span> <span class="o">=</span> <span class="n">lang_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year_group&#39;</span><span class="p">)[</span><span class="s1">&#39;title_length&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">period_summary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/258447ecaf0af96985900b1dd6977ae539f27b0346476f52bffb38fbd7bd9fec.png" src="_images/258447ecaf0af96985900b1dd6977ae539f27b0346476f52bffb38fbd7bd9fec.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="conclusions-and-insights">
+<h2>5. Conclusions and Insights<a class="headerlink" href="#conclusions-and-insights" title="Link to this heading">#</a></h2>
+<section id="key-findings">
+<h3>Key Findings<a class="headerlink" href="#key-findings" title="Link to this heading">#</a></h3>
+<p>Based on the comprehensive analysis of historical book titles from 1600-1900, several important patterns emerge:</p>
+<section id="language-distribution">
+<h4>Language Distribution<a class="headerlink" href="#language-distribution" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Dominant Languages</strong>: Danish (dan) and German (ger) represent the largest portions of the dataset</p></li>
+<li><p><strong>Linguistic Diversity</strong>: The dataset includes over 170 different language codes, reflecting the multilingual nature of historical publishing</p></li>
+<li><p><strong>Regional Patterns</strong>: The prominence of Nordic and Germanic languages suggests a focus on Northern European publishing</p></li>
+</ul>
+</section>
+<section id="temporal-evolution-of-title-lengths">
+<h4>Temporal Evolution of Title Lengths<a class="headerlink" href="#temporal-evolution-of-title-lengths" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Overall Trends</strong>: Title lengths show significant variation over the 300-year period</p></li>
+<li><p><strong>Language-Specific Patterns</strong>: Different languages exhibit distinct patterns in title length evolution</p></li>
+<li><p><strong>Historical Context</strong>: Changes in title length may reflect broader cultural, technological, and publishing trends</p></li>
+</ul>
+</section>
+<section id="distribution-analysis">
+<h4>Distribution Analysis<a class="headerlink" href="#distribution-analysis" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Period Variations</strong>: 50-year interval analysis reveals distinct periods of change in title length patterns</p></li>
+<li><p><strong>Language Differences</strong>: Each language shows unique distribution characteristics across time periods</p></li>
+<li><p><strong>Statistical Significance</strong>: The boxplot analysis highlights periods of particularly high or low title length variability</p></li>
+</ul>
+</section>
+</section>
+<section id="methodological-considerations">
+<h3>Methodological Considerations<a class="headerlink" href="#methodological-considerations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Data Quality</strong>: The analysis includes data cleaning and validation steps to ensure reliable results</p></li>
+<li><p><strong>Visualization Techniques</strong>: Multiple complementary visualization approaches provide comprehensive insights</p></li>
+<li><p><strong>Statistical Analysis</strong>: Both descriptive statistics and distribution analysis offer robust understanding of patterns</p></li>
+</ul>
+</section>
+<section id="future-research-directions">
+<h3>Future Research Directions<a class="headerlink" href="#future-research-directions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Correlation Analysis</strong>: Investigate relationships between title length and other bibliographic metadata</p></li>
+<li><p><strong>Historical Context</strong>: Examine how major historical events correlate with changes in title patterns</p></li>
+<li><p><strong>Genre Analysis</strong>: Explore how different book genres influence title length patterns</p></li>
+<li><p><strong>Cross-Cultural Studies</strong>: Compare findings with similar datasets from other regions</p></li>
+</ol>
+</section>
+<section id="technical-notes">
+<h3>Technical Notes<a class="headerlink" href="#technical-notes" title="Link to this heading">#</a></h3>
+<p>This analysis demonstrates the power of combining data science techniques with historical research, providing new insights into the evolution of publishing practices and cultural expression through book titles.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#research-questions">Research Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description">Dataset Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-libraries">Required Libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-loading">Data Loading</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#language-distribution-analysis">2. Language Distribution Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Overview</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-analysis-of-title-lengths-1600-1900">3. Temporal Analysis of Title Lengths (1600-1900)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Methodology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-research-questions">Key Research Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-analysis-with-smoothing">3.1 Time Series Analysis with Smoothing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filled-area-visualization">3.2 Filled Area Visualization</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-analysis-across-time-periods">4. Distribution Analysis Across Time Periods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplot-analysis-by-50-year-intervals">4.1 Boxplot Analysis by 50-Year Intervals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#language-specific-distribution-analysis">4.2 Language-Specific Distribution Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions-and-insights">5. Conclusions and Insights</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-findings">Key Findings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#language-distribution">Language Distribution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#temporal-evolution-of-title-lengths">Temporal Evolution of Title Lengths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-analysis">Distribution Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodological-considerations">Methodological Considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-research-directions">Future Research Directions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-notes">Technical Notes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
